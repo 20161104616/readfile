@@ -4,8 +4,9 @@ int main()
     int n[10],i,j,a;
     FILE *fr;
     FILE *fw;
-    fr = fopen("//Users//a20161104616//Desktop//readfile//readfile//sort1.txt","r");
-    fw = fopen("//Users//a20161104616//Desktop//readfile//readfile//sort2.txt","w");
+    fr = fopen("//Users//a20161104616//Desktop//readfile//readfile//sort1.txt","r+");
+    fw = fopen("//Users//a20161104616//Desktop//readfile//readfile//sort2.txt","w+");
+
     if(fr == NULL)
         {
             printf("error");
@@ -30,9 +31,12 @@ int main()
         }
     for (i=0; i<10; i++)
     {
-        printf("%d",n[i]);
+        printf("%d ",n[i]);
+          fprintf(fw,"%d\t",n[i]);
     }
     printf("\n");
-    fprintf(fw,"%d",n[i]);
+
+  
+    
     return 0;
 }
